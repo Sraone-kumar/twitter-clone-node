@@ -9,6 +9,8 @@ const User = require("../schemas/UserSchema");
 
 app.set("view engine", "pug");
 
+console.log("hello world");
+
 app.set("views", "views");
 
 app.use(bodyParser.urlencoded({ extended: false }));
