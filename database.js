@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const env = require("env2")("./config.env");
+const env = require("env2")("./.env");
 
 class Database {
   constructor() {
@@ -9,7 +9,10 @@ class Database {
 
   connect() {
     mongoose
-      .connect(process.env.DB_URL)
+      .connect(
+        // "mongodb+srv://noporpuse:uMH6gxIbZEGZ4HbW@twitterclonecluster.gruveee.mongodb.net/TwitterCloneDB?retryWrites=true&w=majority"
+        process.env.DB_URL
+      )
       .then(() => {
         console.log("database connected...");
       })
